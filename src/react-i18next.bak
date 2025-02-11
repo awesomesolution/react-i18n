@@ -1,0 +1,14 @@
+import 'i18next';
+import translationEN from './i18n/en/translation.json';
+
+// Declare the shape of resources
+declare module 'i18next' {
+  // Extend CustomTypeOptions
+  interface CustomTypeOptions {
+    // custom namespace type if you have more than one namespace, adjust as needed
+    defaultNS: 'translation';
+    resources: {
+      translation: typeof translationEN;
+    };
+  }
+}
